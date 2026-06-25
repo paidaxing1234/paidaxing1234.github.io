@@ -4,7 +4,7 @@
 
 上线步骤：
 
-1. 当前可以先用 `https://paidaxing1234.github.io/` 发布。后续如果绑定真实独立域名，再改掉所有 canonical、sitemap 和 robots 地址。
+1. 当前可以先用 `https://paidaxing1234.github.io/` 发布和验证页面质量。AdSense 正式申请建议绑定独立标准域名，例如 `https://aicostradar.com`，因为 Google 创建 AdSense 账号时要求提交不带路径的标准域名，普通子域名通常不是最稳的申请入口。
    可以运行：
 
    ```powershell
@@ -39,7 +39,8 @@ node audit-site.js
 当前真实状态：
 
 - 已有静态页面和广告位占位。
-- 目标发布到 GitHub Pages 用户站。
+- 已发布到 GitHub Pages 用户站。
+- AdSense 正式申请前建议绑定独立域名，再运行 `SETUP-DOMAIN.ps1` 更新全站 canonical、sitemap、robots 和 llms 链接。
 - 没有 AdSense 审核。
 - 没有真实流量。
 - 没有真实广告收入。

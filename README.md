@@ -65,6 +65,8 @@ http://localhost:8821/
 ## 发布与变现状态
 
 - 当前目标发布地址：`https://paidaxing1234.github.io/`
+- 当前 GitHub Pages 地址适合公开预览、Search Console 验证和内容迭代
+- AdSense 正式申请建议绑定独立标准域名；Google 创建 AdSense 账号时要求提交不带路径的标准域名，普通子域名通常不是最稳的申请入口
 - 如果以后绑定独立域名，可用 `.\SETUP-DOMAIN.ps1 -Domain https://your-domain.com` 批量替换 canonical、sitemap、robots 和 llms 链接
 - 联系页当前使用 GitHub Issues 接收公开反馈
 - 继续把高价值主题补到 80 篇以上，每页都要有工具、表格、FAQ 或真实案例
@@ -106,6 +108,7 @@ node audit-site.js
 - 已有工具页和广告位占位
 - 已有搜索抓取基础文件
 - 目标发布到 GitHub Pages 用户站：`https://paidaxing1234.github.io/`
+- AdSense 申请前建议绑定独立标准域名
 - 没有 AdSense 审核
 - 没有真实流量
 - 没有真实广告收入
