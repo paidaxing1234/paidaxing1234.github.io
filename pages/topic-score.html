@@ -1,0 +1,169 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GEO SEO 选题评分器 - 判断关键词能不能靠广告变现</title>
+    <meta name="description" content="输入一个 GEO + SEO 内容站候选关键词，按搜索意图、广告匹配、页面可做度、AI 摘要适配和政策风险估算选题优先级。" />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <link rel="canonical" href="https://paidaxing1234.github.io/pages/topic-score.html" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "GEO SEO 选题评分器",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "description": "按搜索意图、广告匹配和内容可做度评估广告收益内容站选题。"
+      }
+    </script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="../index.html"><span>AI</span><strong>Cost Radar</strong></a>
+      <nav>
+        <a href="../index.html#calculator">成本计算</a>
+        <a href="./adsense-revenue.html">广告收益</a>
+        <a href="./topics.html">专题库</a>
+        <a href="./geo-seo-playbook.html">GEO/SEO</a>
+      </nav>
+    </header>
+    <main>
+      <section class="page-hero">
+        <p class="eyebrow">选题优先级工具</p>
+        <h1>先判断一个词值不值得做，再写页面</h1>
+        <p>广告收益站不能只靠批量发文。一个好选题要同时满足：用户问题明确、广告主愿意买量、页面能做出工具或表格、答案适合被搜索和 AI 摘要引用，并且不踩 AdSense 政策风险。</p>
+      </section>
+
+      <section class="ad-slot"><span>AdSense 广告位</span><strong>选题工具顶部广告</strong></section>
+
+      <section class="calculator score-tool">
+        <div class="section-head">
+          <p class="eyebrow">GEO + SEO 评分</p>
+          <h2>输入候选关键词</h2>
+          <p>示例：AI 客服机器人成本、AI 邮件自动化多少钱、RAG 知识库工具对比、视频生成 API 价格。</p>
+        </div>
+        <div class="score-layout">
+          <form class="score-form" id="topicScoreForm">
+            <label>
+              <span>候选关键词</span>
+              <input name="keyword" value="AI 邮件自动化工具成本怎么算" />
+            </label>
+            <label>
+              <span>页面计划</span>
+              <select name="format">
+                <option value="calculator">计算器 + 表格 + FAQ</option>
+                <option value="comparison">工具对比 + 价格表</option>
+                <option value="guide">长文指南</option>
+                <option value="news">新闻追踪</option>
+              </select>
+            </label>
+            <label>
+              <span>广告匹配</span>
+              <select name="adFit">
+                <option value="strong">明确有 SaaS / 云服务 / 工具广告</option>
+                <option value="medium">有相关软件或课程广告</option>
+                <option value="weak">广告主不明确</option>
+              </select>
+            </label>
+            <label>
+              <span>原创材料</span>
+              <select name="proof">
+                <option value="data">有公式、表格、案例或截图</option>
+                <option value="some">有清单和经验判断</option>
+                <option value="thin">只能改写公开资料</option>
+              </select>
+            </label>
+          </form>
+          <aside class="score-output" id="topicScoreResult" aria-live="polite">
+            <span>优先级评分</span>
+            <strong>0</strong>
+            <p>修改左侧内容后自动评分。</p>
+            <div class="score-bars"></div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="page-grid">
+        <article class="page-card">
+          <span>适合先做</span>
+          <h3>成本、价格、对比、计算类关键词</h3>
+          <p>这类词有明确问题，也容易插入计算器、表格、FAQ 和工具广告。比如 AI API 成本、AI 客服预算、RAG 知识库价格。</p>
+        </article>
+        <article class="page-card">
+          <span>谨慎做</span>
+          <h3>泛泛推荐、纯资讯和无原创页</h3>
+          <p>如果页面只是“十大工具推荐”或改写新闻，没有真实体验、数据、工具或清单，搜索和 AdSense 审核价值都偏弱。</p>
+        </article>
+      </section>
+
+      <section class="insight-band">
+        <article>
+          <span>GEO 判断</span>
+          <h2>能不能被 AI 摘要引用</h2>
+          <p>页面顶部要有短答案，中间要有公式、表格或步骤，底部要有 FAQ。这样搜索引擎和 AI 摘要更容易识别页面到底解决了什么问题。</p>
+        </article>
+        <article>
+          <span>广告判断</span>
+          <h2>能不能接商业广告</h2>
+          <p>优先做有工具购买意图的词。SaaS、云服务、开发者工具、数据平台、CRM、HR、财务软件这类词更容易匹配广告。</p>
+        </article>
+      </section>
+
+      <section class="ad-slot"><span>AdSense 广告位</span><strong>选题工具中段广告</strong></section>
+
+      <section class="note">
+        真实边界：这个工具只能帮助排序选题，不能保证排名、收录或广告收入。上线后仍要用 Search Console 和 AdSense 数据复盘，删除低价值页面，补强有展示但点击率低的页面。
+      </section>
+    </main>
+    <footer><p>AI Cost Radar 会优先扩展高商业意图、可计算、可验证的 AI 成本主题，避免为了广告而制造低价值页面。</p></footer>
+    <script>
+      const form = document.querySelector("#topicScoreForm");
+      const result = document.querySelector("#topicScoreResult");
+      const commercialWords = ["成本", "价格", "多少钱", "预算", "费用", "工具", "SaaS", "API", "CRM", "客服", "RAG", "自动化", "对比", "计算"];
+      const riskWords = ["破解", "盗版", "刷量", "点击广告", "成人", "赌博", "仿牌"];
+
+      function clamp(value) {
+        return Math.max(0, Math.min(100, value));
+      }
+
+      function bar(label, value) {
+        return `<div><span>${label}</span><b>${value}</b><i style="width:${value}%"></i></div>`;
+      }
+
+      function renderScore() {
+        const data = new FormData(form);
+        const keyword = String(data.get("keyword") || "").trim();
+        const format = data.get("format");
+        const adFit = data.get("adFit");
+        const proof = data.get("proof");
+
+        const intent = clamp(35 + commercialWords.filter((word) => keyword.includes(word)).length * 10 + (keyword.length >= 8 ? 10 : 0));
+        const ads = adFit === "strong" ? 90 : adFit === "medium" ? 65 : 30;
+        const page = format === "calculator" ? 92 : format === "comparison" ? 82 : format === "guide" ? 58 : 42;
+        const geo = keyword.includes("怎么算") || keyword.includes("多少钱") || keyword.includes("对比") ? 88 : 62;
+        const proofScore = proof === "data" ? 90 : proof === "some" ? 62 : 28;
+        const risk = riskWords.some((word) => keyword.includes(word)) ? 55 : 0;
+        const total = clamp(Math.round(intent * 0.22 + ads * 0.22 + page * 0.2 + geo * 0.18 + proofScore * 0.18 - risk));
+
+        result.querySelector("strong").textContent = total;
+        result.querySelector("p").textContent =
+          total >= 80 ? "优先做。这个词适合做成工具页或表格页，再配广告位。" :
+          total >= 60 ? "可以做，但要补真实案例、价格或截图，否则容易偏薄。" :
+          "暂缓。先找更具体、有商业意图、能做出工具价值的长尾词。";
+        result.querySelector(".score-bars").innerHTML = [
+          bar("搜索意图", intent),
+          bar("广告匹配", ads),
+          bar("页面可做度", page),
+          bar("GEO 摘要适配", geo),
+          bar("原创材料", proofScore)
+        ].join("");
+      }
+
+      form.addEventListener("input", renderScore);
+      renderScore();
+    </script>
+  </body>
+</html>
+

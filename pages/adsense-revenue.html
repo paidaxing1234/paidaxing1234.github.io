@@ -1,0 +1,86 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AdSense 收益计算器 - 流量能赚多少钱</title>
+    <meta name="description" content="根据 PV、CTR、CPC 和 RPM 估算 Google AdSense 月收益，帮助内容站判断流量目标。" />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <link rel="canonical" href="https://paidaxing1234.github.io/pages/adsense-revenue.html" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "AdSense 收益计算器",
+        "description": "估算搜索流量广告收益的实用工具。",
+        "author": { "@type": "Organization", "name": "AI Cost Radar" }
+      }
+    </script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="../index.html"><span>AI</span><strong>Cost Radar</strong></a>
+      <nav><a href="../index.html#calculator">成本计算</a><a href="./model-pricing.html">模型价格</a><a href="./geo-seo-playbook.html">GEO/SEO</a></nav>
+    </header>
+    <main>
+      <section class="page-hero">
+        <p class="eyebrow">广告收益估算</p>
+        <h1>流量要做到多少，广告才开始像收入？</h1>
+        <p>AdSense 不是有页面就能赚钱，而是要有足够的访问、合理的点击率和有效的 CPC。这个计算器先给你一个月收益范围。</p>
+      </section>
+      <section class="ad-slot"><span>AdSense 广告位</span><strong>收益计算页顶部广告</strong></section>
+      <section class="calculator">
+        <div class="section-head">
+          <p class="eyebrow">收益模型</p>
+          <h2>AdSense 月收益计算器</h2>
+        </div>
+        <div class="calc-grid">
+          <form class="calc-card" id="adsenseForm">
+            <label><span>月 PV</span><input name="pv" type="number" min="1" value="50000" /></label>
+            <label><span>点击率 CTR %</span><input name="ctr" type="number" min="0" step="0.01" value="1.2" /></label>
+            <label><span>每次点击 CPC 美元</span><input name="cpc" type="number" min="0" step="0.01" value="0.18" /></label>
+            <label><span>每千次展示 RPM 美元</span><input name="rpm" type="number" min="0" step="0.01" value="8" /></label>
+          </form>
+          <div class="result-card" id="adsenseResult" aria-live="polite">
+            <span>预计月收益</span>
+            <strong>$0</strong>
+            <p>修改左侧数字后自动计算。</p>
+            <div class="result-breakdown"></div>
+          </div>
+        </div>
+      </section>
+      <section class="page-grid">
+        <article class="page-card"><span>快速答案</span><h3>50k PV 能赚多少？</h3><p>按 CTR 1% 到 2%、CPC 0.1 到 0.3 美元、RPM 6 到 12 美元粗算，月收益通常还是个位数到几十美元区间，流量更大才会明显。</p></article>
+        <article class="page-card"><span>真实门槛</span><h3>别只看收益，先看收录和停留</h3><p>如果页面没有被收录、没有停留时间、没有回访，收益计算器再漂亮也没有意义。</p></article>
+      </section>
+    </main>
+    <footer><p>收益受地区、行业、季节、广告库存和政策变化影响很大，这里只做估算。</p></footer>
+    <script>
+      const form = document.querySelector("#adsenseForm");
+      const result = document.querySelector("#adsenseResult");
+      const money = (v) => `$${Number(v || 0).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+      const read = (name) => Number(new FormData(form).get(name)) || 0;
+      function render() {
+        const pv = read("pv");
+        const ctr = read("ctr") / 100;
+        const cpc = read("cpc");
+        const rpm = read("rpm");
+        const clicks = pv * ctr;
+        const cpcRevenue = clicks * cpc;
+        const rpmRevenue = (pv / 1000) * rpm;
+        const total = Math.max(cpcRevenue, rpmRevenue);
+        result.querySelector("strong").textContent = money(total);
+        result.querySelector("p").textContent = total < 50 ? "流量还不够大，先把收录和长尾词做起来。" : "收益开始可见，但还需要持续增加内容和流量。";
+        result.querySelector(".result-breakdown").innerHTML = `
+          <div><span>估算点击</span><b>${clicks.toFixed(0)}</b></div>
+          <div><span>CPC 收益</span><b>${money(cpcRevenue)}</b></div>
+          <div><span>RPM 收益</span><b>${money(rpmRevenue)}</b></div>
+        `;
+      }
+      form.addEventListener("input", render);
+      render();
+    </script>
+  </body>
+</html>
+

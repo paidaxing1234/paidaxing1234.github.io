@@ -1,0 +1,366 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>收入泄漏雷达 - Search Console / AdSense 复盘</title>
+    <meta name="description" content="把 Search Console 和 AdSense 的导出数据变成收入泄漏、AI 入口压力和下一步修复动作的分析结果。" />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <link rel="canonical" href="https://paidaxing1234.github.io/pages/search-console-workbench.html" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "收入泄漏雷达",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "description": "把 Search Console 和 AdSense 数据转成收入泄漏分析和修复动作。"
+      }
+    </script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="../index.html"><span>AI</span><strong>Cost Radar</strong></a>
+      <nav><a href="../index.html#calculator">成本计算</a><a href="./niche-finder.html">细分发现</a><a href="./growth-roadmap.html">增长路线</a><a href="./launch-checklist.html">上线清单</a></nav>
+    </header>
+    <main>
+      <section class="page-hero">
+        <p class="eyebrow">Revenue leak radar</p>
+        <h1>把 Search Console 变成收入泄漏地图</h1>
+        <p>Google 官方已经把 AI features 的曝光纳入 Search Console 的 Performance report，AI Overviews 和 AI Mode 也没有额外特殊优化要求。这个工具把报表贴进来后，直接拆成标题、内容、AI 入口和广告收益四类修复动作。</p>
+      </section>
+
+      <section class="ad-slot"><span>AdSense 广告位</span><strong>复盘工作台顶部广告</strong></section>
+
+      <section class="note">官方边界：AI features 仍然遵循基础 SEO，重点还是可索引、可抓取、内容有帮助。Search Console 的 Performance report 能看查询、页面和国家趋势，也能作为 AI features 相关曝光的监测入口。这个页面做的是把导出数据变成修复建议，不是猜测排名。</section>
+
+      <section class="calculator">
+        <div class="section-head">
+          <p class="eyebrow">运营工作台</p>
+          <h2>粘贴 Search Console / AdSense CSV</h2>
+          <p>支持列：cluster, impressions, clicks, dwell, pages, rpm, ai_impressions, ai_clicks, density。你可以直接粘贴导出的报表行。</p>
+        </div>
+        <div class="score-layout">
+          <form class="score-form" id="consoleForm">
+            <label class="wide">
+              <span>CSV 数据</span>
+              <textarea
+                name="dataset"
+                placeholder="cluster,impressions,clicks,dwell,pages,rpm,ai_impressions,ai_clicks,density"
+              >cluster,impressions,clicks,dwell,pages,rpm,ai_impressions,ai_clicks,density
+AI 客服成本,12000,180,74,8,8.4,4200,28,mixed
+RAG 知识库预算,8400,76,48,5,10.6,3100,17,thin
+合同管理对比,6200,144,96,11,14.2,2600,22,rich
+发票 OCR 成本,4300,68,91,7,12.4,1400,9,rich
+跨境本地化费用,5100,102,67,6,11.2,2400,18,mixed</textarea>
+            </label>
+            <label>
+              <span>目标 CTR %</span>
+              <input name="targetCtr" type="number" min="0" step="0.1" value="2.0" />
+            </label>
+            <label>
+              <span>目标停留秒数</span>
+              <input name="targetDwell" type="number" min="0" step="1" value="90" />
+            </label>
+            <label>
+              <span>AI 压力权重</span>
+              <select name="aiWeight">
+                <option value="low">低</option>
+                <option value="medium" selected>中</option>
+                <option value="high">高</option>
+              </select>
+            </label>
+            <label>
+              <span>排序方式</span>
+              <select name="sortBy">
+                <option value="leak" selected>按泄漏指数</option>
+                <option value="revenue">按收入</option>
+                <option value="ai">按 AI 压力</option>
+              </select>
+            </label>
+            <label class="wide">
+              <div class="hero-actions">
+                <button class="primary" id="loadSample" type="button">载入样例</button>
+                <button class="secondary" id="clearData" type="button">清空</button>
+              </div>
+            </label>
+          </form>
+          <aside class="score-output" id="consoleOutput" aria-live="polite">
+            <span>收入泄漏指数</span>
+            <strong>0</strong>
+            <p>把报表贴进来后开始分析。</p>
+            <div class="planner-metric"></div>
+            <div class="progress-rail" aria-hidden="true"><i></i></div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="page-grid">
+        <article class="page-card"><span>动作 1</span><h3>有展示没点击</h3><p>优先改标题、摘要和首屏答案块，让搜索结果更像用户要的答案，而不是宽泛介绍。</p></article>
+        <article class="page-card"><span>动作 2</span><h3>有点击没停留</h3><p>补公式、表格、示例、FAQ 和真实案例。说明用户点进来了，但页面还不够解决问题。</p></article>
+        <article class="page-card"><span>动作 3</span><h3>AI 入口吃掉点击</h3><p>把内容写成非 commodity 的答案页，增加原创数据、流程、截图和对比，让 AI features 更容易带来支持链接。</p></article>
+        <article class="page-card"><span>动作 4</span><h3>广告收益开始出现</h3><p>把高 RPM 页面做成站点主骨架，扩展相同意图的细分词簇，形成稳定的内链和收入池。</p></article>
+      </section>
+
+      <section class="data-table">
+        <table>
+          <thead><tr><th>信号</th><th>说明</th><th>建议动作</th></tr></thead>
+          <tbody>
+            <tr><td>展示高 / 点击低</td><td>标题和摘要不够对口，或竞争结果更强</td><td>重写标题，前 120 字先给短答案</td></tr>
+            <tr><td>点击高 / 停留短</td><td>用户点进来后没找到价值</td><td>补表格、FAQ、例子、公式和对比</td></tr>
+            <tr><td>AI 入口高 / Web CTR 低</td><td>页面有被 AI features 触达，但没有转成点击</td><td>增加非 commodity 内容，给出更强的原创价值</td></tr>
+            <tr><td>页面多 / 收益低</td><td>页面群质量不够高，或者词不够商业</td><td>删薄页，切到更强商业意图的词簇</td></tr>
+            <tr><td>RPM 高 / 展示少</td><td>方向对，但规模太小</td><td>围绕同类词扩 5 到 10 个相关页</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="calculator">
+        <div class="section-head">
+          <p class="eyebrow">优先级</p>
+          <h2>最该先改的页面簇</h2>
+          <p>按泄漏指数、收入回收空间、AI 压力和页面簇成熟度排序。</p>
+        </div>
+        <div class="planner-section">
+          <span>优先处理</span>
+          <div class="planner-list" id="rankedList"></div>
+        </div>
+      </section>
+
+      <section class="insight-band">
+        <article>
+          <span>最值钱的复盘</span>
+          <h2>不是“我又更新了”，而是“我知道该改哪一页”</h2>
+          <p>如果没有这个动作闭环，站点很容易变成一堆页面堆积。真正能跑起来的内容站，是持续用数据淘汰薄页、强化高展示词簇。</p>
+        </article>
+        <article>
+          <span>真实门槛</span>
+          <h2>没有 Search Console，就没有增长地图</h2>
+          <p>上线前都是假设。只有当真实域名、真实数据和真实用户进来后，才知道哪个细分词簇值得继续投入。</p>
+        </article>
+      </section>
+
+      <section class="note">真实判断：这个工作台不代表你已经有数据，它只是把上线后的复盘方法提前做出来。要真正用起来，还是得先绑定真实域名并接入 Search Console。</section>
+    </main>
+    <footer><p><a href="./growth-roadmap.html">增长路线</a> · <a href="./niche-finder.html">细分发现</a> · <a href="./launch-checklist.html">上线清单</a></p></footer>
+    <script>
+      const form = document.querySelector("#consoleForm");
+      const output = document.querySelector("#consoleOutput");
+      const rankedList = document.querySelector("#rankedList");
+      const loadSample = document.querySelector("#loadSample");
+      const clearData = document.querySelector("#clearData");
+      const sampleCsv = `cluster,impressions,clicks,dwell,pages,rpm,ai_impressions,ai_clicks,density
+AI 客服成本,12000,180,74,8,8.4,4200,28,mixed
+RAG 知识库预算,8400,76,48,5,10.6,3100,17,thin
+合同管理对比,6200,144,96,11,14.2,2600,22,rich
+发票 OCR 成本,4300,68,91,7,12.4,1400,9,rich
+跨境本地化费用,5100,102,67,6,11.2,2400,18,mixed`;
+
+      function num(value) {
+        const next = Number(String(value || "").replace(/[^0-9.-]/g, ""));
+        return Number.isFinite(next) ? next : 0;
+      }
+
+      function money(value) {
+        return `$${Number(value || 0).toLocaleString("en-US", { minimumFractionDigits: 0, maximumFractionDigits: 0 })}`;
+      }
+
+      function clamp(value) {
+        return Math.max(0, Math.min(100, value));
+      }
+
+      function parseCsvLine(line) {
+        const cells = [];
+        let current = "";
+        let quoted = false;
+        for (let i = 0; i < line.length; i += 1) {
+          const char = line[i];
+          if (quoted) {
+            if (char === '"' && line[i + 1] === '"') {
+              current += '"';
+              i += 1;
+            } else if (char === '"') {
+              quoted = false;
+            } else {
+              current += char;
+            }
+          } else if (char === ",") {
+            cells.push(current.trim());
+            current = "";
+          } else if (char === '"') {
+            quoted = true;
+          } else {
+            current += char;
+          }
+        }
+        cells.push(current.trim());
+        return cells;
+      }
+
+      function normalizeHeader(value) {
+        return String(value || "")
+          .trim()
+          .toLowerCase()
+          .replaceAll(" ", "_")
+          .replaceAll("-", "_");
+      }
+
+      function headerKey(value) {
+        const key = normalizeHeader(value);
+        if (["cluster", "topic", "name", "query", "page_cluster"].includes(key)) return "cluster";
+        if (["impressions", "impr", "views"].includes(key)) return "impressions";
+        if (["clicks", "click", "ctr_clicks"].includes(key)) return "clicks";
+        if (["dwell", "dwell_sec", "dwell_seconds", "avg_dwell"].includes(key)) return "dwell";
+        if (["pages", "page_count", "cluster_pages"].includes(key)) return "pages";
+        if (["rpm", "revenue_rpm", "ad_rpm"].includes(key)) return "rpm";
+        if (["ai_impressions", "ai_views", "ai_overview_impressions", "ai_mode_impressions"].includes(key)) return "ai_impressions";
+        if (["ai_clicks", "ai_ctr_clicks", "ai_overview_clicks", "ai_mode_clicks"].includes(key)) return "ai_clicks";
+        if (["density", "content_density", "richness"].includes(key)) return "density";
+        return key;
+      }
+
+      function parseDataset(text) {
+        const raw = String(text || "").trim();
+        if (!raw) return [];
+        const lines = raw.split(/\r?\n/).map((line) => line.trim()).filter(Boolean);
+        if (!lines.length) return [];
+        const headers = parseCsvLine(lines.shift()).map(headerKey);
+        return lines.map((line) => {
+          const cells = parseCsvLine(line);
+          const row = {};
+          headers.forEach((header, index) => {
+            row[header] = cells[index] ?? "";
+          });
+          return row;
+        }).filter((row) => Object.keys(row).length > 0);
+      }
+
+      function densityFactor(value) {
+        return value === "rich" ? 1.08 : value === "mixed" ? 0.95 : 0.76;
+      }
+
+      function aiWeightFactor(value) {
+        return value === "low" ? 0.75 : value === "high" ? 1.25 : 1;
+      }
+
+      function renderRow(label, value) {
+        return `<div class="planner-row"><span>${label}</span><b>${value}</b></div>`;
+      }
+
+      function leakAction(row) {
+        if (row.ctr < row.targetCtr * 0.5) return "改标题和摘要";
+        if (row.dwell < row.targetDwell * 0.7) return "补表格和案例";
+        if (row.density === "thin") return "合并薄页";
+        if (row.aiShare > 15 && row.aiCtr < 1) return "强化非 commodity 内容";
+        if (row.pages < 10) return "扩同簇页面";
+        return "放大高 RPM 簇";
+      }
+
+      function buildAnalysis() {
+        const data = new FormData(form);
+        const targetCtr = num(data.get("targetCtr")) || 2;
+        const targetDwell = num(data.get("targetDwell")) || 90;
+        const aiWeight = aiWeightFactor(data.get("aiWeight"));
+        const sortBy = String(data.get("sortBy") || "leak");
+        const rows = parseDataset(data.get("dataset"));
+        const analyzed = rows.map((raw) => {
+          const cluster = String(raw.cluster || "未命名簇").trim();
+          const impressions = num(raw.impressions);
+          const clicks = num(raw.clicks);
+          const dwell = num(raw.dwell);
+          const pages = Math.max(1, num(raw.pages) || 1);
+          const rpm = num(raw.rpm);
+          const aiImpressions = num(raw.ai_impressions);
+          const aiClicks = num(raw.ai_clicks);
+          const density = String(raw.density || "mixed").trim().toLowerCase();
+          const ctr = impressions ? (clicks / impressions) * 100 : 0;
+          const aiShare = impressions ? (aiImpressions / impressions) * 100 : 0;
+          const aiCtr = aiImpressions ? (aiClicks / aiImpressions) * 100 : 0;
+          const revenue = (impressions / 1000) * rpm * densityFactor(density);
+          const ctrGap = targetCtr ? Math.max(0, targetCtr - ctr) / targetCtr : 0;
+          const dwellGap = targetDwell ? Math.max(0, targetDwell - dwell) / targetDwell : 0;
+          const densityGap = density === "thin" ? 1 : density === "mixed" ? 0.45 : 0;
+          const aiPressure = aiShare > 15 ? Math.min(1, aiShare / 30) : 0;
+          const leakScore = clamp(Math.round(28 + ctrGap * 35 + dwellGap * 18 + densityGap * 10 + aiPressure * aiWeight * 15 + (pages < 10 ? 5 : 0)));
+          const potentialRevenue = revenue * (1 + ctrGap * 0.42 + dwellGap * 0.2 + densityGap * 0.12 + aiPressure * aiWeight * 0.08);
+          const recoverable = Math.max(0, potentialRevenue - revenue);
+          const action = leakAction({ ctr, dwell, density, pages, targetCtr, targetDwell, aiShare, aiCtr });
+          return {
+            cluster,
+            impressions,
+            clicks,
+            dwell,
+            pages,
+            rpm,
+            aiImpressions,
+            aiClicks,
+            density,
+            ctr,
+            aiShare,
+            aiCtr,
+            revenue,
+            leakScore,
+            recoverable,
+            action,
+          };
+        });
+
+        const sorted = analyzed.sort((a, b) => {
+          if (sortBy === "revenue") return b.revenue - a.revenue || b.leakScore - a.leakScore;
+          if (sortBy === "ai") return b.aiShare - a.aiShare || b.leakScore - a.leakScore;
+          return b.leakScore - a.leakScore || b.recoverable - a.recoverable;
+        });
+
+        const totalImpressions = sorted.reduce((sum, row) => sum + row.impressions, 0);
+        const totalClicks = sorted.reduce((sum, row) => sum + row.clicks, 0);
+        const totalRevenue = sorted.reduce((sum, row) => sum + row.revenue, 0);
+        const totalRecoverable = sorted.reduce((sum, row) => sum + row.recoverable, 0);
+        const weightedCtr = totalImpressions ? (totalClicks / totalImpressions) * 100 : 0;
+        const aiImpressions = sorted.reduce((sum, row) => sum + row.aiImpressions, 0);
+        const aiShare = totalImpressions ? (aiImpressions / totalImpressions) * 100 : 0;
+        const avgDwell = sorted.length ? sorted.reduce((sum, row) => sum + row.dwell, 0) / sorted.length : 0;
+        const overallLeak = sorted.length ? sorted.reduce((sum, row) => sum + row.leakScore, 0) / sorted.length : 0;
+        const top = sorted[0];
+        const nextStep =
+          weightedCtr < targetCtr * 0.75 ? "先改标题和摘要" :
+          avgDwell < targetDwell * 0.75 ? "先补表格和案例" :
+          aiShare > 15 ? "优先做非 commodity 内容" :
+          totalRecoverable > 0 ? "放大高 RPM 页面簇" : "继续扩同簇页面";
+
+        output.querySelector("strong").textContent = `${Math.round(overallLeak)}`;
+        output.querySelector("p").textContent = top ? `最该先改：${top.cluster}。${nextStep}。` : "把报表贴进来后开始分析。";
+        output.querySelector(".progress-rail i").style.width = `${Math.min(100, overallLeak)}%`;
+        output.querySelector(".planner-metric").innerHTML = [
+          renderRow("数据行数", `${sorted.length} 行`),
+          renderRow("加权 CTR", `${weightedCtr.toFixed(2)}%`),
+          renderRow("AI 入口占比", `${aiShare.toFixed(1)}%`),
+          renderRow("估算月收入", money(totalRevenue)),
+          renderRow("可追回收入", money(totalRecoverable)),
+        ].join("");
+
+        rankedList.innerHTML = (sorted.slice(0, 5).map((row) => `
+          <article>
+            <strong>${row.cluster}</strong>
+            <p>CTR ${row.ctr.toFixed(2)}% · 停留 ${Math.round(row.dwell)}s · AI 入口 ${row.aiShare.toFixed(1)}%</p>
+            <small>${row.action} · 泄漏 ${row.leakScore}/100 · 可追回 ${money(row.recoverable)}</small>
+          </article>
+        `).join("")) || `<article><strong>暂无数据</strong><p>先把 Search Console 或 AdSense CSV 贴进来。</p></article>`;
+      }
+
+      loadSample?.addEventListener("click", () => {
+        form.elements.dataset.value = sampleCsv;
+        buildAnalysis();
+      });
+
+      clearData?.addEventListener("click", () => {
+        form.elements.dataset.value = "";
+        buildAnalysis();
+      });
+
+      form?.addEventListener("input", buildAnalysis);
+      buildAnalysis();
+    </script>
+  </body>
+</html>
+

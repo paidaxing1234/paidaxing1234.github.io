@@ -1,0 +1,100 @@
+{
+  "ok": true,
+  "readyForLaunch": true,
+  "pageCount": 59,
+  "manualPages": 19,
+  "generatedPages": 40,
+  "adSlots": 53,
+  "structuredDataPages": 55,
+  "sitemapUrlCount": 59,
+  "blockers": [],
+  "warnings": [],
+  "opportunities": [
+    "先做成本计算、客服、Agent、RAG、OCR、翻译这类商业意图更强的词。",
+    "每个高分词补真实价格案例、公式和截图，避免变成低价值自动生成页。",
+    "上线后用 Search Console 看展示量，优先扩展有 impression 但 CTR 低的词簇。"
+  ],
+  "topTopics": [
+    {
+      "slug": "ai-localization-cost",
+      "title": "AI 本地化翻译成本怎么算",
+      "keyword": "AI 本地化翻译成本",
+      "score": 98,
+      "adMatch": "本地化平台、翻译工具、跨境电商软件、产品管理工具",
+      "url": "https://paidaxing1234.github.io/pages/generated/ai-localization-cost.html"
+    },
+    {
+      "slug": "ai-translation-cost",
+      "title": "AI 翻译工具成本怎么算",
+      "keyword": "AI 翻译成本",
+      "score": 98,
+      "adMatch": "翻译工具、跨境电商软件、写作工具、本地化服务",
+      "url": "https://paidaxing1234.github.io/pages/generated/ai-translation-cost.html"
+    },
+    {
+      "slug": "ai-support-bot-cost",
+      "title": "AI 客服机器人成本怎么算",
+      "keyword": "AI 客服机器人成本",
+      "score": 98,
+      "adMatch": "客服软件、工单系统、知识库平台、AI API 平台",
+      "url": "https://paidaxing1234.github.io/pages/generated/ai-support-bot-cost.html"
+    },
+    {
+      "slug": "ai-image-generation-cost",
+      "title": "AI 图片生成成本怎么算",
+      "keyword": "AI 图片生成成本",
+      "score": 98,
+      "adMatch": "AI 图片工具、设计软件、素材平台、电商图片工具",
+      "url": "https://paidaxing1234.github.io/pages/generated/ai-image-generation-cost.html"
+    },
+    {
+      "slug": "ai-email-support-cost",
+      "title": "AI 邮件客服成本怎么算",
+      "keyword": "AI 邮件客服成本",
+      "score": 98,
+      "adMatch": "客服软件、工单系统、知识库平台、邮件自动化工具",
+      "url": "https://paidaxing1234.github.io/pages/generated/ai-email-support-cost.html"
+    },
+    {
+      "slug": "ai-voiceover-cost",
+      "title": "AI 语音配音成本怎么算",
+      "keyword": "AI 语音配音成本",
+      "score": 98,
+      "adMatch": "配音工具、视频剪辑工具、字幕工具、内容创作软件",
+      "url": "https://paidaxing1234.github.io/pages/generated/ai-voiceover-cost.html"
+    },
+    {
+      "slug": "ai-agent-cost",
+      "title": "AI Agent 运行成本怎么算",
+      "keyword": "AI Agent 成本",
+      "score": 98,
+      "adMatch": "Agent 平台、浏览器自动化、云服务器、日志监控工具",
+      "url": "https://paidaxing1234.github.io/pages/generated/ai-agent-cost.html"
+    },
+    {
+      "slug": "ai-ocr-cost",
+      "title": "AI OCR 识别成本怎么算",
+      "keyword": "AI OCR 成本",
+      "score": 98,
+      "adMatch": "OCR 工具、文档管理软件、发票软件、企业自动化工具",
+      "url": "https://paidaxing1234.github.io/pages/generated/ai-ocr-cost.html"
+    },
+    {
+      "slug": "rag-cost-calculator",
+      "title": "RAG 知识库成本怎么算",
+      "keyword": "RAG 知识库成本",
+      "score": 98,
+      "adMatch": "向量数据库、知识库工具、云存储、AI API 平台",
+      "url": "https://paidaxing1234.github.io/pages/generated/rag-cost-calculator.html"
+    },
+    {
+      "slug": "ai-saas-pricing-formula",
+      "title": "SaaS AI 功能怎么定价",
+      "keyword": "SaaS AI 功能定价",
+      "score": 98,
+      "adMatch": "计费系统、SaaS 工具、支付平台、成本监控工具",
+      "url": "https://paidaxing1234.github.io/pages/generated/ai-saas-pricing-formula.html"
+    }
+  ],
+  "checkedAt": "2026-06-25T17:45:58.157Z"
+}

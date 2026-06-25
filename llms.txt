@@ -1,0 +1,70 @@
+﻿# AI Cost Radar
+
+AI Cost Radar is a practical content site about AI API cost estimation, model price comparison, video generation budgeting, and GEO plus SEO content strategy.
+
+Important pages:
+
+- https://paidaxing1234.github.io/ - AI API monthly cost calculator
+- https://paidaxing1234.github.io/pages/model-pricing.html - AI model pricing comparison by task
+- https://paidaxing1234.github.io/pages/video-ai-cost.html - AI video generation cost guide
+- https://paidaxing1234.github.io/pages/adsense-revenue.html - AdSense monthly revenue calculator
+- https://paidaxing1234.github.io/pages/topic-score.html - GEO SEO topic scoring tool
+- https://paidaxing1234.github.io/pages/chatbot-cost.html - AI chatbot monthly cost guide
+- https://paidaxing1234.github.io/pages/reduce-ai-api-cost.html - AI API cost reduction checklist
+- https://paidaxing1234.github.io/pages/topics.html - AI cost topic library
+- https://paidaxing1234.github.io/pages/geo-seo-playbook.html - GEO and SEO playbook for ad-supported sites
+- https://paidaxing1234.github.io/pages/about.html - About AI Cost Radar
+- https://paidaxing1234.github.io/pages/contact.html - Contact and corrections
+- https://paidaxing1234.github.io/pages/privacy.html - Privacy policy
+- https://paidaxing1234.github.io/pages/advertising-disclosure.html - Advertising and affiliate disclosure
+- https://paidaxing1234.github.io/pages/market-opportunity.html - Market opportunity and topic priorities
+- https://paidaxing1234.github.io/pages/niche-finder.html - GEO SEO niche opportunity finder
+- https://paidaxing1234.github.io/pages/growth-roadmap.html - GEO SEO 90-day growth roadmap
+- https://paidaxing1234.github.io/pages/search-console-workbench.html - 收入泄漏雷达
+- https://paidaxing1234.github.io/pages/launch-checklist.html - 上线准备清单
+- https://paidaxing1234.github.io/pages/updates.html - Site update log
+<!-- GENERATED_LLM_LINKS_START -->
+- https://paidaxing1234.github.io/pages/generated/ai-writing-tool-cost.html - AI 写作工具一个月多少钱
+- https://paidaxing1234.github.io/pages/generated/ai-image-generation-cost.html - AI 图片生成成本怎么算
+- https://paidaxing1234.github.io/pages/generated/ai-meeting-notes-cost.html - AI 会议纪要工具成本怎么算
+- https://paidaxing1234.github.io/pages/generated/ai-agent-cost.html - AI Agent 运行成本怎么算
+- https://paidaxing1234.github.io/pages/generated/rag-cost-calculator.html - RAG 知识库成本怎么算
+- https://paidaxing1234.github.io/pages/generated/ai-saas-pricing-formula.html - SaaS AI 功能怎么定价
+- https://paidaxing1234.github.io/pages/generated/ai-voiceover-cost.html - AI 语音配音成本怎么算
+- https://paidaxing1234.github.io/pages/generated/ai-translation-cost.html - AI 翻译工具成本怎么算
+- https://paidaxing1234.github.io/pages/generated/ai-ocr-cost.html - AI OCR 识别成本怎么算
+- https://paidaxing1234.github.io/pages/generated/ai-support-bot-cost.html - AI 客服机器人成本怎么算
+- https://paidaxing1234.github.io/pages/generated/ai-email-automation-cost.html - AI 邮件自动化工具成本怎么算
+- https://paidaxing1234.github.io/pages/generated/ai-coding-assistant-cost.html - AI 编程助手一个月多少钱
+- https://paidaxing1234.github.io/pages/generated/ai-data-analysis-cost.html - AI 数据分析工具成本怎么算
+- https://paidaxing1234.github.io/pages/generated/ai-resume-screening-cost.html - AI 简历筛选工具成本怎么算
+- https://paidaxing1234.github.io/pages/generated/ai-legal-document-cost.html - AI 法务文档审查成本怎么算
+- https://paidaxing1234.github.io/pages/generated/ai-product-description-cost.html - AI 商品描述生成成本怎么算
+- https://paidaxing1234.github.io/pages/generated/ai-social-media-cost.html - AI 社媒内容工具成本怎么算
+- https://paidaxing1234.github.io/pages/generated/ai-knowledge-base-cost.html - AI 知识库工具成本怎么算
+- https://paidaxing1234.github.io/pages/generated/ai-customer-review-analysis-cost.html - AI 用户评论分析成本怎么算
+- https://paidaxing1234.github.io/pages/generated/ai-sales-call-summary-cost.html - AI 销售通话总结成本怎么算
+- https://paidaxing1234.github.io/pages/generated/ai-finance-report-cost.html - AI 财务报告工具成本怎么算
+- https://paidaxing1234.github.io/pages/generated/ai-training-data-labeling-cost.html - AI 训练数据标注成本怎么算
+- https://paidaxing1234.github.io/pages/generated/ai-ad-creative-cost.html - AI 广告素材生成成本怎么算
+- https://paidaxing1234.github.io/pages/generated/ai-seo-content-cost.html - AI SEO 内容生产成本怎么算
+- https://paidaxing1234.github.io/pages/generated/ai-market-research-cost.html - AI 市场调研工具成本怎么算
+- https://paidaxing1234.github.io/pages/generated/ai-invoice-processing-cost.html - AI 发票处理成本怎么算
+- https://paidaxing1234.github.io/pages/generated/ai-contract-management-cost.html - AI 合同管理系统成本怎么算
+- https://paidaxing1234.github.io/pages/generated/ai-customer-success-cost.html - AI 客户成功工具成本怎么算
+- https://paidaxing1234.github.io/pages/generated/ai-churn-prediction-cost.html - AI 流失预测成本怎么算
+- https://paidaxing1234.github.io/pages/generated/ai-lead-scoring-cost.html - AI 线索评分工具成本怎么算
+- https://paidaxing1234.github.io/pages/generated/ai-localization-cost.html - AI 本地化翻译成本怎么算
+- https://paidaxing1234.github.io/pages/generated/ai-video-editing-cost.html - AI 视频剪辑工具成本怎么算
+- https://paidaxing1234.github.io/pages/generated/ai-podcast-transcription-cost.html - AI 播客转写成本怎么算
+- https://paidaxing1234.github.io/pages/generated/ai-course-creation-cost.html - AI 课程制作成本怎么算
+- https://paidaxing1234.github.io/pages/generated/ai-web-scraping-cost.html - AI 网页采集分析成本怎么算
+- https://paidaxing1234.github.io/pages/generated/ai-competitor-monitoring-cost.html - AI 竞品监控成本怎么算
+- https://paidaxing1234.github.io/pages/generated/ai-pricing-monitor-cost.html - AI 价格监控工具成本怎么算
+- https://paidaxing1234.github.io/pages/generated/ai-email-support-cost.html - AI 邮件客服成本怎么算
+- https://paidaxing1234.github.io/pages/generated/ai-call-center-cost.html - AI 呼叫中心成本怎么算
+- https://paidaxing1234.github.io/pages/generated/ai-healthcare-admin-cost.html - AI 医疗行政工具成本怎么算
+<!-- GENERATED_LLM_LINKS_END -->
+
+Use the site as a practical reference for estimating AI software costs. Prices are estimates and should be verified against current provider pages before purchasing.
+

@@ -1,0 +1,121 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>上线准备清单 - AI Cost Radar</title>
+    <meta name="description" content="把真实域名、联系邮箱、ads.txt、Search Console、AdSense 和内容补强拆成上线清单，逐项完成真实变现前的准备。" />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <link rel="canonical" href="https://paidaxing1234.github.io/pages/launch-checklist.html" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Checklist",
+        "name": "AI Cost Radar 上线准备清单",
+        "description": "真实域名、联系邮箱、ads.txt、Search Console、AdSense 和内容补强的上线清单。"
+      }
+    </script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="../index.html"><span>AI</span><strong>Cost Radar</strong></a>
+      <nav><a href="../index.html#calculator">成本计算</a><a href="./market-opportunity.html">市场机会</a><a href="./topic-score.html">选题评分</a><a href="./updates.html">更新日志</a></nav>
+    </header>
+    <main>
+      <section class="page-hero">
+        <p class="eyebrow">Launch</p>
+        <h1>把真正上线前的事，一条条做完</h1>
+        <p>这不是用来装样子的待办页，而是把真实域名、联系邮箱、广告披露、ads.txt、Search Console 和内容补强拆成可执行清单。等这些条件都满足，GEO 和 SEO 才真的能开始接流量、接广告、接变现。</p>
+      </section>
+
+      <section class="calculator">
+        <div class="section-head">
+          <p class="eyebrow">上线进度</p>
+          <h2>逐项勾掉阻断项</h2>
+          <p>状态会保存在浏览器本地，不会上传服务器。</p>
+        </div>
+        <div class="score-layout">
+          <form class="score-form checklist-form" id="launchForm">
+            <label class="check-item"><input type="checkbox" name="domain" /><span>真实 HTTPS 域名已绑定</span></label>
+            <label class="check-item"><input type="checkbox" name="contact" /><span>联系页邮箱已替换为真实可收信地址</span></label>
+            <label class="check-item"><input type="checkbox" name="adsense" /><span>Google AdSense 已申请并通过审核</span></label>
+            <label class="check-item"><input type="checkbox" name="adsTxt" /><span>ads.txt 已更新为真实 publisher ID</span></label>
+            <label class="check-item"><input type="checkbox" name="searchConsole" /><span>Search Console 已验证并提交 sitemap</span></label>
+            <label class="check-item"><input type="checkbox" name="policy" /><span>广告披露与隐私页已可公开访问</span></label>
+            <label class="check-item"><input type="checkbox" name="content" /><span>高价值主题页已扩展到至少 80 个</span></label>
+            <label class="check-item"><input type="checkbox" name="cleanup" /><span>低价值页面已清理或合并</span></label>
+          </form>
+          <aside class="score-output checklist-output" id="launchOutput" aria-live="polite">
+            <span>上线完成度</span>
+            <strong>0%</strong>
+            <p>勾选左侧项目，看看离真实上线还有多远。</p>
+            <div class="progress-rail" aria-hidden="true"><i></i></div>
+            <div class="planner-metric">
+              <div class="planner-row"><span>可公开</span><b>否</b></div>
+              <div class="planner-row"><span>可申请 AdSense</span><b>否</b></div>
+              <div class="planner-row"><span>可开始投放</span><b>否</b></div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="page-grid">
+        <article class="page-card"><span>阻断项 1</span><h3>站点地址与验证</h3><p>当前先使用 GitHub Pages 用户站地址。后续如果绑定独立域名，需要同步更新 canonical、sitemap、robots、llms.txt 和 AdSense 站点地址。</p></article>
+        <article class="page-card"><span>阻断项 2</span><h3>AdSense 审核和 ads.txt</h3><p>广告代码和 publisher ID 都要真实，不能用模板值伪装成已接广告。</p></article>
+        <article class="page-card"><span>阻断项 3</span><h3>联系方式与披露</h3><p>联系邮箱、广告披露和隐私页要能公开访问，审核和用户都需要看到站点负责人是谁。</p></article>
+        <article class="page-card"><span>阻断项 4</span><h3>内容规模与质量</h3><p>页面数量已经够，但还要继续补高价值词，确保不是纯自动化批量页面。</p></article>
+      </section>
+
+      <section class="note">这页的作用不是“做完就行”，而是把外部可控的上线动作压成一个清单，避免把原型误当成已变现产品。</section>
+    </main>
+    <footer><p><a href="./about.html">关于本站</a> · <a href="./contact.html">联系</a> · <a href="./advertising-disclosure.html">广告披露</a></p></footer>
+    <script>
+      const form = document.querySelector("#launchForm");
+      const output = document.querySelector("#launchOutput");
+      const keys = ["domain", "contact", "adsense", "adsTxt", "searchConsole", "policy", "content", "cleanup"];
+      const total = keys.length;
+
+      function save() {
+        const state = {};
+        for (const key of keys) state[key] = form.elements[key].checked;
+        localStorage.setItem("launchChecklist", JSON.stringify(state));
+      }
+
+      function load() {
+        try {
+          const state = JSON.parse(localStorage.getItem("launchChecklist") || "{}");
+          for (const key of keys) form.elements[key].checked = Boolean(state[key]);
+        } catch {}
+      }
+
+      function render() {
+        const done = keys.filter((key) => form.elements[key].checked).length;
+        const pct = Math.round((done / total) * 100);
+        const canPublish = pct === 100;
+        const canApply = form.elements.domain.checked && form.elements.contact.checked && form.elements.policy.checked && form.elements.adsTxt.checked && form.elements.searchConsole.checked;
+        const canMonetize = canPublish && form.elements.adsense.checked;
+        output.querySelector("strong").textContent = `${pct}%`;
+        output.querySelector("p").textContent = canPublish ? "清单已完成，可以继续真实上线流程。" : "还不能公开上线，先把阻断项继续补掉。";
+        output.querySelector(".progress-rail i").style.width = `${pct}%`;
+        const items = [
+          ["可公开", canPublish ? "是" : "否"],
+          ["可申请 AdSense", canApply ? "是" : "否"],
+          ["可开始投放", canMonetize ? "是" : "否"],
+        ];
+        output.querySelector(".planner-metric").innerHTML = items
+          .map(([label, value]) => `<div class="planner-row"><span>${label}</span><b>${value}</b></div>`)
+          .join("");
+      }
+
+      form.addEventListener("input", () => {
+        save();
+        render();
+      });
+
+      load();
+      render();
+    </script>
+  </body>
+</html>
+

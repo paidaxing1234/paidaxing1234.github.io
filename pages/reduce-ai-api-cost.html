@@ -1,0 +1,60 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>如何降低 AI API 成本 - 12 个立刻能做的动作</title>
+    <meta name="description" content="降低 AI API 成本的实用清单：缓存、限额、模型分层、检索裁剪、批处理、短输出、日志监控和免费用户额度。" />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <link rel="canonical" href="https://paidaxing1234.github.io/pages/reduce-ai-api-cost.html" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "如何降低 AI API 成本",
+        "step": [
+          { "@type": "HowToStep", "name": "加缓存", "text": "对重复问题和重复摘要结果做缓存。" },
+          { "@type": "HowToStep", "name": "限制上下文", "text": "只传相关片段，不传整篇文档。" },
+          { "@type": "HowToStep", "name": "模型分层", "text": "简单任务用低价模型，关键任务用强模型。" },
+          { "@type": "HowToStep", "name": "设置额度", "text": "给免费用户和异常用户设置每日调用上限。" }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="../index.html"><span>AI</span><strong>Cost Radar</strong></a>
+      <nav><a href="../index.html#calculator">成本计算</a><a href="./model-pricing.html">模型价格</a><a href="./adsense-revenue.html">广告收益</a></nav>
+    </header>
+    <main>
+      <section class="page-hero">
+        <p class="eyebrow">AI API 省钱清单</p>
+        <h1>账单涨太快时，先做这 12 件事</h1>
+        <p>很多 AI 产品不是用户太多，而是每次请求塞太多上下文、输出太长、重复问题不缓存、免费用户无限用。省钱先从调用链开始。</p>
+      </section>
+      <section class="ad-slot"><span>AdSense 广告位</span><strong>省钱清单页顶部广告</strong></section>
+      <section class="data-table">
+        <table>
+          <thead>
+            <tr><th>动作</th><th>适合场景</th><th>收益</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>缓存重复答案</td><td>FAQ、摘要、固定模板</td><td>减少重复 token 消耗</td></tr>
+            <tr><td>裁剪检索上下文</td><td>RAG、知识库问答</td><td>降低输入 token</td></tr>
+            <tr><td>限制输出长度</td><td>客服、摘要、批量生成</td><td>降低输出 token</td></tr>
+            <tr><td>模型分层</td><td>多任务 AI 产品</td><td>避免所有请求都走强模型</td></tr>
+            <tr><td>批处理</td><td>离线分类、批量摘要</td><td>降低调用开销</td></tr>
+            <tr><td>用户额度</td><td>免费工具、公开 demo</td><td>防止被刷爆账单</td></tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="page-grid">
+        <article class="page-card"><span>快速答案</span><h3>最先做哪个？</h3><p>先做调用日志和用户额度。你必须先知道是谁、在哪个页面、用什么 prompt 把钱烧掉了。</p></article>
+        <article class="page-card"><span>内容变现</span><h3>为什么这页适合广告？</h3><p>搜索这类问题的人通常已经在付 API 账单，商业价值比泛 AI 新闻更高。</p></article>
+      </section>
+    </main>
+    <footer><p>省钱策略需要结合真实日志，不建议只凭估算盲目换模型。</p></footer>
+  </body>
+</html>
+

@@ -1,0 +1,4 @@
+# AI Cost Radar
+# AdSense publisher ID is not configured yet.
+# After AdSense approves this site, replace this file with the exact line from AdSense, for example:
+# google.com, pub-YOUR_PUBLISHER_ID, DIRECT, f08c47fec0942fa0
